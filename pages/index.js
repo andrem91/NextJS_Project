@@ -1,24 +1,12 @@
-import { useState } from 'react';
+import Contador from './components/Contador';
+import styles from './index.module.css';
 
 function Home() {
   return (
-  <div>
-    <h2>Home</h2>
+  <div className={styles.body}>
+    <h1 className={styles.title}>Bem vindo ao contador!</h1>
     <Contador />
     </div>)
-}
-
-function Contador() {
-  const [contador, setContador] = useState(1);
-  function adicionarContador() {
-    setContador(contador + 1)
-  }
-  return (
-    <div>
-      <div>{contador}</div>
-      <button onClick={adicionarContador}>Adicionar</button>
-    </div>
-  )
 }
 
 export default Home;
