@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './Contador.module.css';
+import styles from '../styles/Contador.module.css';
 
 function Contador() {
   const [contador, setContador] = useState(1);
@@ -7,9 +7,9 @@ function Contador() {
     setContador(contador + 1)
   }
   return (
-    <div className={styles.container}>
+    <div className={styles.containerContador}>
       <h2>Contador: {contador}</h2>
-      <button className={styles.primary} onClick={adicionarContador}>Adicionar</button>
+      <button className={styles.buttonContador} onClick={adicionarContador}>Adicionar</button>
     </div>
   );
 };

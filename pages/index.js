@@ -1,12 +1,17 @@
-import Contador from './components/Contador';
-import styles from './index.module.css';
+import Link from 'next/link';
+import Contador from '../components/Contador';
 
 function Home() {
+
   return (
-  <div className={styles.body}>
-    <h1 className={styles.title}>Bem vindo ao contador!</h1>
-    <Contador />
-    </div>)
-}
+    <div>
+      <Link href="/tempo">
+        <a>Página Tempo</a>
+      </Link>
+      <h1>Bem vindo ao contador!</h1>
+      <Contador />
+    </div>
+  );
+};
 
 export default Home;
