@@ -1,18 +1,20 @@
 html,
 body {
+   margin: 0;
    padding: 0;
-   margin: 0 auto;
    line-height: 1.6;
    font-size: 18px;
    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
     'Arial', sans-serif;
    background-color: darkcyan;
-   max-width: 980px;
-
 }
 
 * {
    box-sizing: border-box;
+}
+
+h1 {
+   text-align: center;
 }
 
 a {
@@ -22,4 +24,23 @@ a {
 
 a:hover {
    text-decoration: underline;
+}
+
+header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: black;
+   color: #fff;
+   margin: 0;
+}
+
+header a {
+   margin-right: 10px;
+   font-size: 1.2rem;
+}
+
+main {
+   margin: 0 auto;
+   max-width: 980px;
 }

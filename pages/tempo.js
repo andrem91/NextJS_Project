@@ -1,13 +1,15 @@
-import Link from 'next/link';
 import Tempo from '../components/Tempo';
+import Navbar from '../components/Navbar';
+
 
 function tempo(props) {
   return (
     <div>
-      <Link href="/">
-        <a>Página Home</a>
-      </Link>
-      <Tempo time={props.staticDateString} />
+      <Navbar />
+      <main>
+        <h1>Bem vindo a página de tempo!</h1>
+        <Tempo time={props.staticDateString} />
+      </main>
     </div>
   );
 };
@@ -15,7 +17,6 @@ function tempo(props) {
 export function getStaticProps() {
   const staticDate = new Date();
   const staticDateString = staticDate.toGMTString();
-
   return {
     props: {
       staticDateString
